@@ -66,7 +66,7 @@ export class WiFiPhysicsEngine {
         body,
         type: 'wifi',
         id: `wifi-${i}`,
-        color: i % 2 === 0 ? '#00f0ff' : '#8b5cf6',
+        color: '#2563eb',
         size,
       })
     }
@@ -87,7 +87,7 @@ export class WiFiPhysicsEngine {
         body,
         type: 'device',
         id: `device-${i}`,
-        color: '#00ff88',
+        color: '#2563eb',
         size: Math.max(w, h),
       })
     }
@@ -107,7 +107,7 @@ export class WiFiPhysicsEngine {
         body,
         type: 'packet',
         id: `packet-${i}`,
-        color: '#ffa500',
+        color: '#6b7280',
         size,
       })
     }
@@ -127,7 +127,7 @@ export class WiFiPhysicsEngine {
         body,
         type: 'node',
         id: `node-${i}`,
-        color: '#00f0ff',
+        color: '#2563eb',
         size,
       })
     }
@@ -211,11 +211,11 @@ export class WiFiPhysicsEngine {
     const height = this.canvas.height / (window.devicePixelRatio || 1)
 
     // Clear canvas with slight fade for trail effect
-    this.ctx.fillStyle = 'rgba(10, 14, 39, 0.1)'
+    this.ctx.fillStyle = 'rgba(255, 255, 255, 0.1)'
     this.ctx.fillRect(0, 0, width, height)
 
     // Draw connections
-    this.ctx.strokeStyle = 'rgba(0, 240, 255, 0.2)'
+    this.ctx.strokeStyle = 'rgba(37, 99, 235, 0.2)'
     this.ctx.lineWidth = 1
     for (const constraint of this.engine.world.constraints) {
       if (constraint.bodyA && constraint.bodyB) {

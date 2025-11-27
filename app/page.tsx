@@ -5,7 +5,6 @@ import DesignedFor from '@/sections/DesignedFor'
 import SignalStrength from '@/sections/SignalStrength'
 import HowItWorks from '@/sections/HowItWorks'
 import ForUsers from '@/sections/ForUsers'
-import TechStack from '@/sections/TechStack'
 import Download from '@/sections/Download'
 import Footer from '@/components/Footer'
 
@@ -19,7 +18,6 @@ export default function Home() {
       <SignalStrength />
       <HowItWorks />
       <ForUsers />
-      <TechStack />
       <Download />
       <Footer />
     </main>

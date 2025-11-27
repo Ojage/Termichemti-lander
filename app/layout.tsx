@@ -1,15 +1,17 @@
 import type { Metadata } from 'next'
-import { Josefin_Sans, Nunito } from 'next/font/google'
+import { EB_Garamond, Nunito } from 'next/font/google'
 import './globals.css'
 
-const josefinSans = Josefin_Sans({
+const garamond = EB_Garamond({
   subsets: ['latin'],
-  variable: '--font-josefin',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-garamond',
   display: 'swap',
 })
 
 const nunito = Nunito({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-nunito',
   display: 'swap',
 })
@@ -26,10 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${josefinSans.variable} ${nunito.variable} font-sans`}>
+      <body className={`${garamond.variable} ${nunito.variable} font-sans`}>
         {children}
       </body>
     </html>
   )
 }
-

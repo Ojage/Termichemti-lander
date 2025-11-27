@@ -30,9 +30,7 @@ export default function ForUsers() {
   const activeContent = personas.find((p) => p.id === activePersona)
 
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-wifi-navy/30 to-wifi-dark" />
-
+    <section className="relative py-24 overflow-hidden bg-white">
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -41,8 +39,8 @@ export default function ForUsers() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-display font-bold text-center mb-16"
         >
-          <span className="text-white">For Hackers,</span>{' '}
-          <span className="text-wifi-cyan">Admins, and Humans</span>
+          <span className="text-black">For Hackers,</span>{' '}
+          <span className="text-primary">Admins, and Humans</span>
         </motion.h2>
 
         {/* Persona Pills */}
@@ -53,8 +51,8 @@ export default function ForUsers() {
               onClick={() => setActivePersona(persona.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all ${
                 activePersona === persona.id
-                  ? 'bg-wifi-cyan text-wifi-dark'
-                  : 'bg-wifi-navy/50 text-gray-300 border border-wifi-cyan/20'
+                  ? 'bg-black text-white'
+                  : 'bg-gray-light text-gray-dark border border-gray-300'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -73,9 +71,9 @@ export default function ForUsers() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="bg-wifi-navy/50 backdrop-blur-sm border border-wifi-cyan/20 rounded-2xl p-8 md:p-12 text-center"
+              className="bg-gray-light border border-gray-300 rounded-2xl p-8 md:p-12 text-center"
             >
-              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-dark leading-relaxed">
                 {activeContent.description}
               </p>
             </motion.div>
@@ -85,4 +83,3 @@ export default function ForUsers() {
     </section>
   )
 }
-

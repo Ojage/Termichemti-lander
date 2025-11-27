@@ -15,20 +15,17 @@ const strengthConfig = {
   excellent: {
     bars: 4,
     label: 'Excellent for streaming',
-    color: '#00ff88',
-    bgColor: '#00ff88',
+    color: '#2563eb',
   },
   good: {
     bars: 3,
     label: 'Good for browsing',
-    color: '#ffa500',
-    bgColor: '#ffa500',
+    color: '#2563eb',
   },
   weak: {
     bars: 2,
     label: 'Weak connection',
-    color: '#f87171',
-    bgColor: '#f87171',
+    color: '#6b7280',
   },
 }
 
@@ -41,19 +38,17 @@ export default function SignalStrength() {
     ]
 
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-wifi-navy/30 to-wifi-dark" />
-
+    <section className="relative py-24 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-display font-bold text-center mb-16"
+          className="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-black"
         >
-          <span className="text-white">Signal Strength</span>{' '}
-          <span className="text-wifi-cyan">You Can Feel</span>
+          <span className="text-black">Signal Strength</span>{' '}
+          <span className="text-primary">You Can Feel</span>
         </motion.h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -74,12 +69,12 @@ export default function SignalStrength() {
                   onMouseLeave={() => setHoveredNetwork(null)}
                   className={`p-4 rounded-lg border transition-all cursor-pointer ${
                     isHovered
-                      ? 'border-wifi-cyan bg-wifi-navy/50'
-                      : 'border-wifi-cyan/20 bg-wifi-navy/20'
+                      ? 'border-primary bg-gray-light'
+                      : 'border-gray-300 bg-white'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-300 font-medium">
+                    <span className="text-gray-dark font-medium">
                       {network.name}
                     </span>
                     <div className="flex gap-1">
@@ -90,7 +85,7 @@ export default function SignalStrength() {
                           style={{
                             height: `${8 + i * 4}px`,
                             backgroundColor:
-                              i < config.bars ? config.bgColor : '#4b5563',
+                              i < config.bars ? config.color : '#e5e7eb',
                           }}
                           animate={{
                             opacity: isHovered && i < config.bars ? [1, 0.5, 1] : 1,
@@ -147,8 +142,8 @@ export default function SignalStrength() {
                         isActive
                           ? activeConfig
                             ? activeConfig.color
-                            : '#00f0ff'
-                          : '#374151'
+                            : '#2563eb'
+                          : '#e5e7eb'
                       }
                       strokeWidth="4"
                       strokeLinecap="round"
@@ -163,7 +158,7 @@ export default function SignalStrength() {
                   cx="100"
                   cy="100"
                   r="4"
-                  fill={activeConfig ? activeConfig.color : '#00f0ff'}
+                  fill={activeConfig ? activeConfig.color : '#2563eb'}
                 />
               </svg>
             </motion.div>
@@ -173,8 +168,7 @@ export default function SignalStrength() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-8 text-xl font-semibold"
-                style={{ color: activeConfig.color }}
+                className="mt-8 text-xl font-semibold text-black"
               >
                 {activeConfig.label}
               </motion.div>
@@ -185,4 +179,3 @@ export default function SignalStrength() {
     </section>
   )
 }
-

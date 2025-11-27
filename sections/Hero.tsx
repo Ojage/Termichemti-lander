@@ -85,11 +85,8 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-white"
     >
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-wifi-dark via-wifi-navy to-wifi-dark" />
-
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text Content */}
@@ -105,15 +102,15 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight"
             >
-              <span className="text-white">Meet</span>{' '}
-              <span className="text-wifi-cyan">Termichemti</span>
+              <span className="text-black">Meet</span>{' '}
+              <span className="text-primary">Termichemti</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl text-gray-300 leading-relaxed"
+              className="text-xl md:text-2xl text-gray-dark leading-relaxed"
             >
               A desktop companion that reveals your saved Wi-Fi passwords, scans
               nearby networks, and helps you connect smarter on Windows and
@@ -128,7 +125,7 @@ export default function Hero() {
             >
               <motion.button
                 onClick={scrollToDownload}
-                className="px-8 py-4 bg-wifi-cyan text-wifi-dark font-semibold rounded-full text-lg hover:bg-wifi-green transition-colors"
+                className="px-8 py-4 bg-black text-white font-semibold rounded-full text-lg hover:bg-primary-dark transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -136,7 +133,7 @@ export default function Hero() {
               </motion.button>
               <motion.button
                 onClick={scrollToFeatures}
-                className="px-8 py-4 border-2 border-wifi-cyan text-wifi-cyan font-semibold rounded-full text-lg hover:bg-wifi-cyan/10 transition-colors"
+                className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full text-lg hover:bg-gray-light transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -150,7 +147,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden border border-wifi-cyan/20"
+            className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden border border-gray-300"
           >
             <canvas
               ref={canvasRef}
@@ -162,7 +159,7 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-wifi-cyan/70 bg-wifi-navy/80 px-4 py-2 rounded-full backdrop-blur-sm"
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm text-gray bg-white/90 px-4 py-2 rounded-full border border-gray-300"
               >
                 Move your mouse to disturb the network
               </motion.div>
@@ -181,7 +178,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="text-wifi-cyan/50"
+          className="text-gray"
         >
           <svg
             className="w-6 h-6"
@@ -199,4 +196,3 @@ export default function Hero() {
     </section>
   )
 }
-

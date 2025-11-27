@@ -10,16 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'wifi-cyan': '#00f0ff',
-        'wifi-green': '#00ff88',
-        'wifi-violet': '#8b5cf6',
-        'wifi-warm': '#ffa500',
-        'wifi-dark': '#0a0e27',
-        'wifi-navy': '#1a1f3a',
+        'primary': '#2563eb',
+        'primary-dark': '#1e40af',
+        'gray-light': '#f3f4f6',
+        'gray': '#6b7280',
+        'gray-dark': '#374151',
       },
       fontFamily: {
-        sans: ['var(--font-nunito)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-josefin)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-nunito)', 'gothic', 'system-ui', 'sans-serif'],
+        display: ['var(--font-garamond)', 'Garamond', 'serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
@@ -36,4 +35,3 @@ const config: Config = {
   plugins: [],
 }
 export default config
-

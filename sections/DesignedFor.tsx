@@ -29,9 +29,7 @@ export default function DesignedFor() {
   }, [])
 
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-wifi-dark to-wifi-navy/30" />
-
+    <section className="relative py-24 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
@@ -43,18 +41,18 @@ export default function DesignedFor() {
             className="space-y-6"
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold">
-              <span className="text-white">Behind the scenes,</span>{' '}
-              <span className="text-wifi-cyan">
+              <span className="text-black">Behind the scenes,</span>{' '}
+              <span className="text-primary">
                 it speaks netsh and nmcli
               </span>{' '}
-              <span className="text-white">so you don't have to.</span>
+              <span className="text-black">so you don't have to.</span>
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-dark leading-relaxed">
               Termichemti uses your system's own network tools under the hood
               but wraps them in a safe, intuitive interface. No more hunting
               through command-line documentation or remembering obscure flags.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
+            <p className="text-lg text-gray-dark leading-relaxed">
               Whether you're on Windows using netsh or Linux with nmcli,
               Termichemti abstracts the complexity while giving you full control
               over your wireless networks.
@@ -71,10 +69,10 @@ export default function DesignedFor() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-wifi-dark border border-red-500/30 rounded-lg p-4 font-mono text-xs"
+                className="bg-gray-dark border border-gray-300 rounded-lg p-4 font-mono text-xs text-white"
               >
                 <div className="text-red-400 mb-2">$ netsh wlan show profile</div>
-                <div className="text-gray-500 space-y-1">
+                <div className="text-gray-400 space-y-1">
                   <div>All User Profile Information</div>
                   <div>---</div>
                   <div>Profile : HomeNetwork</div>
@@ -84,11 +82,11 @@ export default function DesignedFor() {
                 <div className="text-red-400 mt-4">
                   $ netsh wlan show profile name="HomeNetwork" key=clear
                 </div>
-                <div className="text-gray-500 mt-2">
+                <div className="text-gray-400 mt-2">
                   Key Content : ********
                 </div>
                 <motion.div
-                  className="mt-2 text-wifi-cyan"
+                  className="mt-2 text-primary"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
@@ -105,9 +103,9 @@ export default function DesignedFor() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="bg-wifi-navy border border-wifi-cyan/30 rounded-lg p-4"
+                className="bg-gray-light border border-gray-300 rounded-lg p-4"
               >
-                <div className="text-wifi-cyan font-semibold mb-3 text-sm">
+                <div className="text-primary font-semibold mb-3 text-sm">
                   Saved Networks
                 </div>
                 <div className="space-y-2">
@@ -119,10 +117,10 @@ export default function DesignedFor() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.6 + i * 0.1 }}
-                        className="bg-wifi-dark/50 rounded p-2 text-xs flex items-center justify-between"
+                        className="bg-white border border-gray-200 rounded p-2 text-xs flex items-center justify-between"
                       >
-                        <span className="text-gray-300">{network}</span>
-                        <button className="text-wifi-green text-xs hover:text-wifi-cyan">
+                        <span className="text-gray-dark">{network}</span>
+                        <button className="text-primary text-xs hover:text-primary-dark">
                           Copy
                         </button>
                       </motion.div>
@@ -137,4 +135,3 @@ export default function DesignedFor() {
     </section>
   )
 }
-
