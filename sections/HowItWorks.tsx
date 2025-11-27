@@ -8,7 +8,7 @@ const steps = [
     number: '01',
     title: 'Install Termichemti',
     description:
-      'Desktop app for Windows and Linux, built on Electron. Download and run the installer.',
+      'Desktop app for Windows and Linux. Download and run the installer.',
     icon: DownloadIcon,
   },
   {

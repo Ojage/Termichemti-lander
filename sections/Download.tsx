@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { WindowsIcon } from '@/components/Icons'
 
 export default function Download() {
   return (
@@ -39,11 +40,12 @@ export default function Download() {
         >
           <motion.a
             href="#"
-            className="px-10 py-5 bg-black text-white font-display font-bold rounded-full text-xl hover:bg-primary-dark transition-all shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 inline-block"
+            className="px-10 py-5 bg-black text-white font-display font-bold rounded-full text-xl hover:bg-primary-dark transition-all shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 inline-flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Download for Windows (.exe)
+            <span>Download for Windows (.exe)</span>
+            <WindowsIcon className="w-5 h-5 text-white" />
           </motion.a>
           <motion.button
             disabled

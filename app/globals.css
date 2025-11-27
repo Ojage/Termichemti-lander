@@ -5,14 +5,17 @@
 @layer base {
   body {
     @apply bg-white text-black antialiased;
-    font-family: var(--font-nunito), nunito, sans-serif
   }
 
+  *{
+    font-family: var(--font-nunito), nunito, serif;
+
+  }
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-garamond), Garamond, serif;
+    font-family: var(--font-garamond), Garamond, serif !important;
   }
 }
 

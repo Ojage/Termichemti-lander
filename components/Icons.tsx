@@ -116,3 +116,18 @@ export function CheckIcon({ className = 'w-6 h-6' }: { className?: string }) {
   )
 }
 
+export function WindowsIcon({ className = 'w-5 h-5' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M3 4.5l8-1.1v8.7H3V4.5zm9.5-1.3L21 2.5v9.6h-8.5V3.2zM3 12.9h8v8.7l-8-1.1v-7.6zm9.5-.8H21v9.4l-8.5-1.2v-8.2z" />
+    </svg>
+  )
+}
+

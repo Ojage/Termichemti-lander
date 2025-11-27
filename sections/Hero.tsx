@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { WiFiPhysicsEngine } from '@/lib/physics'
 import { motion } from 'framer-motion'
+import { WindowsIcon } from '@/components/Icons'
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -103,7 +104,7 @@ export default function Hero() {
               className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight"
             >
               <span className="text-black">Meet</span>{' '}
-              <span className="text-primary">Termichemti</span>
+              <span className="text-primary" style={{fontFamily: "Garamond"}}>Termichemti</span>
             </motion.h1>
 
             <motion.p
@@ -125,11 +126,13 @@ export default function Hero() {
             >
               <motion.button
                 onClick={scrollToDownload}
-                className="px-8 py-4 bg-black text-white font-semibold rounded-full text-lg hover:bg-primary-dark transition-colors"
+                className="px-8 py-4 bg-black text-white font-semibold rounded-full text-lg hover:bg-primary-dark transition-colors inline-flex items-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Download for Windows
+                <span>Download for Windows</span>
+                <WindowsIcon className="w-5 h-5 text-white" />
+
               </motion.button>
               <motion.button
                 onClick={scrollToFeatures}

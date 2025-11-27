@@ -85,7 +85,7 @@ export default function Navigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <strong>Ojage</strong> <span>Termichemti</span>
+              <strong style={{fontFamily: "Garamond"}}>Ojage</strong> <span style={{fontFamily: "Garamond"}}>Termichemti</span>
             </motion.h1>
           </Link>
 

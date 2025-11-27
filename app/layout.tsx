@@ -17,7 +17,7 @@ const nunito = Nunito({
 })
 
 export const metadata: Metadata = {
-  title: 'Termichemti - Your Wi-Fi, Unlocked',
+  title: 'Termichemti | Your Wi-Fi, Unlocked',
   description: 'A desktop companion that reveals your saved Wi-Fi passwords, scans nearby networks, and helps you connect smarter on Windows and Linux.',
 }
 
