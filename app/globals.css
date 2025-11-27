@@ -8,14 +8,14 @@
   }
 
   *{
-    font-family: var(--font-nunito), nunito, serif;
+    font-family: 'Nunito', 'Inter', 'Segoe UI', system-ui, sans-serif;
 
   }
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-garamond), Garamond, serif !important;
+    font-family: 'EB Garamond', 'Georgia', serif !important;
   }
 }
 

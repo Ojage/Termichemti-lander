@@ -17,8 +17,8 @@ const config: Config = {
         'gray-dark': '#374151',
       },
       fontFamily: {
-        sans: ['var(--font-nunito)', 'gothic', 'system-ui', 'sans-serif'],
-        display: ['var(--font-garamond)', 'Garamond', 'serif'],
+        sans: ['"Nunito"', '"Inter"', '"Segoe UI"', 'system-ui', 'sans-serif'],
+        display: ['"EB Garamond"', '"Georgia"', 'serif'],
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
