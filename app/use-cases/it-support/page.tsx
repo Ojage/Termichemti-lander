@@ -53,9 +53,9 @@ export default function ITSupportPage() {
                 <div className="space-y-4 text-gray-dark">
                   <p>
                     <strong className="text-primary">On-site Support:</strong>{' '}
-                    When visiting a client's office, quickly access their Wi-Fi
-                    credentials without asking them to dig through router settings
-                    or remember passwords.
+                    When visiting a client’s office, quickly access their
+                    Wi-Fi credentials without asking them to dig through router
+                    settings or remember passwords.
                   </p>
                   <p>
                     <strong className="text-primary">Remote Troubleshooting:</strong>{' '}

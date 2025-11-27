@@ -1,20 +1,5 @@
 import type { Metadata } from 'next'
-import { EB_Garamond, Nunito } from 'next/font/google'
 import './globals.css'
-
-const garamond = EB_Garamond({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-garamond',
-  display: 'swap',
-})
-
-const nunito = Nunito({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-nunito',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Termichemti | Your Wi-Fi, Unlocked',
@@ -28,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${garamond.variable} ${nunito.variable} font-sans`}>
+      <body className="font-sans">
         {children}
       </body>
     </html>

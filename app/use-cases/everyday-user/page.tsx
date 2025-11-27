@@ -21,7 +21,7 @@ export default function EverydayUserPage() {
               For Everyday Users
             </h1>
             <p className="text-xl text-gray-dark leading-relaxed">
-              No more asking "what's the Wi-Fi password again?" in your own
+              No more asking “what’s the Wi-Fi password again?” in your own
               home. View and share your saved passwords with ease.
             </p>
 
@@ -52,13 +52,13 @@ export default function EverydayUserPage() {
                 <div className="space-y-4 text-gray-dark">
                   <p>
                     <strong className="text-primary">Home Network:</strong>{' '}
-                    You've saved your home Wi-Fi password years ago and can't
-                    remember it. Termichemti shows it instantly so you can share
-                    it with guests or reconnect devices.
+                    You’ve saved your home Wi-Fi password years ago and can’t
+                    remember it. Termichemti shows it instantly so you can
+                    share it with guests or reconnect devices.
                   </p>
                   <p>
                     <strong className="text-primary">Multiple Networks:</strong>{' '}
-                    See all the networks you've connected to (home, office,
+                    See all the networks you’ve connected to (home, office,
                     coffee shops) and their passwords in one organized view.
                   </p>
                   <p>
